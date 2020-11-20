@@ -1,0 +1,6 @@
+{
+    "name": "defelopment-Digital Durga Puja...",
+    "dbconn": {
+        "mongodbURI" : "mongodb://localhost:27017/eccs_mhm"
+    }
+}

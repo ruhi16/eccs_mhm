@@ -1,0 +1,6 @@
+{
+    "name": "production-Digital Durga Puja...",
+    "dbconn": {
+        "mongodbURI" : "mongodb+srv://ruhi16:asdf1234@cluster0.yaizg.mongodb.net/eccs_mhm"
+    }
+}

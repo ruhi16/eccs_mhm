@@ -1,0 +1,183 @@
+@ACCESS_TOKEN=Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2MDQ4NDI1NzMsImV4cCI6MTYwNTQ0NzM3MywiYXVkIjoiNWZhN2Y0NGQ0M2ZlNzUyYzMwZjE5YTU1IiwiaXNzIjoicmF3c29sdXRpb25zLmluIn0.NoPrzl1ysChOsUPRvF0FeElRfbvL8ixpNJYi6A505dk
+@REFRESH_TOKEN="refresh token"
+
+
+
+### Home Page ###
+GET http://localhost:3000/
+content-type: application/json,
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Home Page ###
+GET http://localhost:3000/ping
+content-type: application/json,
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### User Registration Submit ###
+POST  http://localhost:3000/api/register
+content-type: application/json
+
+{
+    "firstname":"Hari Narayan",
+    "lastname":"Das",
+    "email":"hndas2020@gmail.com",
+    "password":"abcd"
+
+}
+
+
+
+
+
+
+
+
+
+
+### User Login Submit ###
+POST  http://localhost:3000/api/login
+content-type: application/json
+
+{    
+    "email":"abcd@gmail.com",
+    "password":"abcd"
+}
+
+
+
+
+
+
+
+
+### User's Dashboard
+GET http://localhost:3000/api/users
+content-type: application/json
+authorization: {{ACCESS_TOKEN}}
+
+
+
+
+
+
+
+
+
+
+### Registered User's OTP Verification
+POST http://localhost:3000/api/users/OTP_vefiry
+content-type: application/json
+authorization: {{ACCESS_TOKEN}}
+
+{
+    "otp":"2412" 
+}
+
+
+
+
+
+### Registered User's OTP Resend
+GET http://localhost:3000/api/users/OTP_resend
+content-type: application/json
+authorization: {{ACCESS_TOKEN}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### User's New Post
+POST http://localhost:3000/api/users/post
+content-type: application/json
+authorization: {{ACCESS_TOKEN}}
+
+{       
+    "caption":"this is my caption",
+    "img_link":"https://pixcel.com"
+}
+
+
+
+### User's New Comment on any post
+POST http://localhost:3000/api/users/post/comment
+content-type: application/json
+authorization: {{ACCESS_TOKEN}}
+
+{    
+    "post_id":"5fa2e9bf52d4601444c6e1dd",
+    "comment_text":"this is my comment on any post"    
+}
+
+
+
+
+
+
+### User's Logout
+POST http://localhost:3000/api/logout
+content-type: application/json,
+authorization: {{ACCESS_TOKEN}} 
+
+{
+    "refresh_token": ""
+}
+
+
+
+
+
+
+
+### New Request ###
+GET http://localhost:3000/unknown
+
+
+
+
+
+
+### All Clubs
+GET http://localhost:3000/api/clubs
+
+
+
+
+### All Clubs
+POST http://localhost:3000/api/clubs/register
+content-type: application/json
+
+{
+
+}
