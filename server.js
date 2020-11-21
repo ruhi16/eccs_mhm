@@ -12,7 +12,7 @@ app.use(express.json()); //{extended:false}
 
 
 app.get('/', (req, res, next)=>{
-    res.send({"message":"Hello World: " + config.get('dbconn.mongodbURI') + "Config Env: " + config.environment });
+    res.send({"message":"Hello World: " + config.get('dbconn.mongodbURI') + " Config Env: " + config.environment + " Node Env:" + process.env.NODE_ENV}); });
 });
 
 app.get('/ping', (req, res, next)=>{
